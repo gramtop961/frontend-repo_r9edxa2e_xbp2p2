@@ -6,6 +6,7 @@ export default function Pages({ lang }) {
       portfolioTitle: 'Our Work in Action',
       portfolioIntro: 'We help brands stand out through creative storytelling and measurable strategy.',
       portfolioCTA: 'Want to be our next success story? Get in touch.',
+      labels: { challenge: 'Challenge', solution: 'Solution', result: 'Result' },
       servicesTitle: 'What We Do',
       servicesSub: 'From idea to measurable growth.',
       services: [
@@ -35,6 +36,7 @@ export default function Pages({ lang }) {
       portfolioTitle: 'I nostri lavori in azione',
       portfolioIntro: 'Aiutiamo i brand a distinguersi con storytelling creativo e strategia misurabile.',
       portfolioCTA: 'Vuoi essere il prossimo caso di successo? Contattaci.',
+      labels: { challenge: 'Sfida', solution: 'Soluzione', result: 'Risultato' },
       servicesTitle: 'Cosa facciamo',
       servicesSub: 'Dall’idea alla crescita reale.',
       services: [
@@ -62,6 +64,7 @@ export default function Pages({ lang }) {
     },
   }[lang];
 
+  // Edit your Case Studies here: add, remove, or reorder items.
   const cases = [
     { client: 'Cafe Luna', industry: 'Hospitality', challenge: 'Low visibility and weekday footfall', solution: 'UGC-driven content and local ads', result: '+45% engagement' },
     { client: 'Fit&Go', industry: 'Fitness', challenge: 'Lead quality for memberships', solution: 'Lead gen with reels and LP', result: '+320 leads' },
@@ -95,9 +98,9 @@ export default function Pages({ lang }) {
                   <span className="text-xs text-neutral-500">{c.industry}</span>
                 </div>
                 <div className="mt-3 text-sm text-neutral-700 space-y-1">
-                  <p><span className="font-medium">Challenge:</span> {c.challenge}</p>
-                  <p><span className="font-medium">Solution:</span> {c.solution}</p>
-                  <p><span className="font-medium">Result:</span> {c.result}</p>
+                  <p><span className="font-medium">{copy.labels.challenge}:</span> {c.challenge}</p>
+                  <p><span className="font-medium">{copy.labels.solution}:</span> {c.solution}</p>
+                  <p><span className="font-medium">{copy.labels.result}:</span> {c.result}</p>
                 </div>
               </div>
             ))}
